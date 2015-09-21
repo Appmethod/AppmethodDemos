@@ -1,4 +1,4 @@
-AppmethodDemos
-==============
+Appmethod115
+============
 
-Snapshot of Appmethod 1.14 sample code
+Demos for Appmethod v.115
