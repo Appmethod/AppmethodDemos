@@ -22,9 +22,10 @@ object DatePickerForm: TDatePickerForm
     DefaultItemStyles.GroupHeaderStyle = ''
     DefaultItemStyles.GroupFooterStyle = ''
     GroupingKind = Grouped
+    Viewport.Width = 384.000000000000000000
+    Viewport.Height = 93.000000000000000000
     object ListBoxItem5: TListBoxItem
-      Height = 44.000000000000000000
-      Size.Width = 344.000000000000000000
+      Size.Width = 384.000000000000000000
       Size.Height = 44.000000000000000000
       Size.PlatformDefault = False
       StyleLookup = 'listboxitemnodetail'
@@ -35,17 +36,17 @@ object DatePickerForm: TDatePickerForm
         OnChange = TimeEdit1Change
         Align = Right
         Margins.Right = 5.000000000000000000
-        Position.X = 242.000000000000000000
+        Position.X = 282.000000000000000000
+        Position.Y = 6.000000000000000000
         Size.Width = 97.000000000000000000
-        Size.Height = 44.000000000000000000
+        Size.Height = 32.000000000000000000
         Size.PlatformDefault = False
         TabOrder = 0
       end
     end
     object ListBoxItem6: TListBoxItem
-      Height = 44.000000000000000000
       Position.Y = 44.000000000000000000
-      Size.Width = 344.000000000000000000
+      Size.Width = 384.000000000000000000
       Size.Height = 44.000000000000000000
       Size.PlatformDefault = False
       StyleLookup = 'listboxitemnodetail'

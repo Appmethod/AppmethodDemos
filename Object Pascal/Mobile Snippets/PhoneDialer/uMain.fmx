@@ -82,6 +82,8 @@ object PhoneDialerForm: TPhoneDialerForm
     DefaultItemStyles.ItemStyle = 'listboxitemrightdetail'
     DefaultItemStyles.GroupHeaderStyle = ''
     DefaultItemStyles.GroupFooterStyle = ''
+    Viewport.Width = 364.000000000000000000
+    Viewport.Height = 121.000000000000000000
     object CarrierNameItem: TListBoxItem
       Size.Width = 364.000000000000000000
       Size.Height = 30.000000000000000000

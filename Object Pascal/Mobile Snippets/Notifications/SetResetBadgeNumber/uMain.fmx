@@ -24,13 +24,13 @@ object SettingBadgeNumberForm: TSettingBadgeNumberForm
     DefaultItemStyles.GroupHeaderStyle = ''
     DefaultItemStyles.GroupFooterStyle = ''
     GroupingKind = Grouped
+    Viewport.Width = 384.000000000000000000
+    Viewport.Height = 63.000000000000000000
     object ListBoxItem1: TListBoxItem
       Selectable = False
-      Height = 44.000000000000000000
-      Size.Width = 344.000000000000000000
+      Size.Width = 384.000000000000000000
       Size.Height = 44.000000000000000000
       Size.PlatformDefault = False
-      StyleLookup = 'listboxitemnodetail'
       TabOrder = 0
       Text = 'Badge Number'
       object nbBadgeNumber: TNumberBox
@@ -39,7 +39,7 @@ object SettingBadgeNumberForm: TSettingBadgeNumberForm
         TabOrder = 0
         Cursor = crIBeam
         TextSettings.HorzAlign = Center
-        Position.X = 183.000000000000000000
+        Position.X = 223.000000000000000000
         Position.Y = 6.000000000000000000
         Size.Width = 49.000000000000000000
         Size.Height = 32.000000000000000000
@@ -49,7 +49,7 @@ object SettingBadgeNumberForm: TSettingBadgeNumberForm
         Align = Right
         Anchors = []
         Margins.Right = 8.000000000000000000
-        Position.X = 234.000000000000000000
+        Position.X = 274.000000000000000000
         Position.Y = 5.000000000000000000
         Size.Width = 47.000000000000000000
         Size.Height = 34.000000000000000000
@@ -63,7 +63,7 @@ object SettingBadgeNumberForm: TSettingBadgeNumberForm
         Align = Right
         Anchors = []
         Margins.Right = 8.000000000000000000
-        Position.X = 289.000000000000000000
+        Position.X = 329.000000000000000000
         Position.Y = 5.000000000000000000
         Size.Width = 47.000000000000000000
         Size.Height = 34.000000000000000000

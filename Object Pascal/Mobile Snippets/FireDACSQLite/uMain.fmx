@@ -6,62 +6,64 @@ object FireDAC_SQLiteForm: TFireDAC_SQLiteForm
   ClientWidth = 384
   FormFactor.Width = 1280
   FormFactor.Height = 1024
-  FormFactor.Devices = [dkDesktop]
+  FormFactor.Devices = [Desktop]
   OnCreate = FormCreate
-  DesignerMobile = True
-  DesignerWidth = 384
-  DesignerHeight = 592
-  DesignerDeviceName = 'Google Nexus 4'
-  DesignerOrientation = 0
+  DesignerMasterStyle = 3
   object ToolBar1: TToolBar
-    Height = 48.000000000000000000
+    Size.Width = 384.000000000000000000
+    Size.Height = 48.000000000000000000
+    Size.PlatformDefault = False
     TabOrder = 0
-    Width = 384.000000000000000000
     object btnAdd: TButton
-      Align = alRight
-      Height = 48.000000000000000000
+      Align = Right
       Margins.Right = 5.000000000000000000
       Position.X = 331.000000000000000000
+      Size.Width = 48.000000000000000000
+      Size.Height = 48.000000000000000000
+      Size.PlatformDefault = False
       StyleLookup = 'addtoolbuttonbordered'
       TabOrder = 0
       Text = 'btnAdd'
-      Width = 48.000000000000000000
       OnClick = btnAddClick
     end
     object Title: TLabel
-      Align = alContents
-      Font.Size = 17.000000000000000000
-      StyledSettings = [ssFamily, ssStyle, ssFontColor]
-      Height = 48.000000000000000000
+      Align = Contents
+      StyledSettings = [Family, Style, FontColor]
+      Size.Width = 384.000000000000000000
+      Size.Height = 48.000000000000000000
+      Size.PlatformDefault = False
       StyleLookup = 'toollabel'
+      TextSettings.Font.Size = 17.000000000000000000
+      TextSettings.HorzAlign = Center
       Text = 'SQLite && FireDAC'
-      TextAlign = taCenter
-      Width = 384.000000000000000000
-      Trimming = ttCharacter
     end
     object btnDelete: TButton
-      Align = alLeft
-      StyledSettings = [ssFamily, ssSize, ssStyle, ssFontColor, ssOther]
-      Height = 48.000000000000000000
+      Align = Left
+      StyledSettings = [Family, Size, Style, FontColor, Other]
       Margins.Left = 5.000000000000000000
       Position.X = 5.000000000000000000
+      Size.Width = 48.000000000000000000
+      Size.Height = 48.000000000000000000
+      Size.PlatformDefault = False
       StyleLookup = 'deletetoolbutton'
       TabOrder = 2
       Text = 'Delete'
-      Trimming = ttCharacter
-      Width = 76.000000000000000000
       OnClick = btnDeleteClick
     end
   end
   object ListBox1: TListBox
-    Align = alClient
-    Height = 519.000000000000000000
+    Align = Client
+    Size.Width = 384.000000000000000000
+    Size.Height = 519.000000000000000000
+    Size.PlatformDefault = False
     TabOrder = 1
-    Width = 384.000000000000000000
+    DisableFocusEffect = True
     ItemIndex = 0
     DefaultItemStyles.ItemStyle = 'listboxitemnodetail'
     DefaultItemStyles.GroupHeaderStyle = ''
     DefaultItemStyles.GroupFooterStyle = ''
+    Viewport.Width = 384.000000000000000000
+    Viewport.Height = 519.000000000000000000
   end
   object BindingsList1: TBindingsList
     Methods = <>
@@ -76,8 +78,6 @@ object FireDAC_SQLiteForm: TFireDAC_SQLiteForm
       FillDataSource = BindSourceDB1
       FillDisplayFieldName = 'TaskName'
       AutoFill = False
-      BufferCount = -1
-      AutoBufferCount = False
       FillExpressions = <>
       FillHeaderExpressions = <>
       FillBreakGroups = <>

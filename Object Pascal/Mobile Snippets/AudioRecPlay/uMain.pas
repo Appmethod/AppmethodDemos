@@ -1,3 +1,14 @@
+//---------------------------------------------------------------------------
+
+// This software is Copyright (c) 2015 Embarcadero Technologies, Inc.
+// You may only use this software if you are an authorized licensee
+// of an Embarcadero developer tools product.
+// This software is considered a Redistributable as defined under
+// the software license agreement that comes with the Embarcadero Products
+// and is subject to that software license agreement.
+
+//---------------------------------------------------------------------------
+
 unit uMain;
 
 interface
@@ -5,10 +16,14 @@ interface
 uses
   System.SysUtils, System.Types, System.UITypes, System.Classes, System.Variants,
   FMX.Types, FMX.Controls, FMX.Forms, FMX.Dialogs, FMX.Media, FMX.StdCtrls,
-  FMX.Objects, System.Actions, FMX.ActnList;
+  FMX.Objects, System.Actions, FMX.ActnList, FMX.Controls.Presentation;
 
 const
+{$IF DEFINED(ANDROID) OR DEFINED(IOS)}
   AUDIO_FILENAME = 'test.caf';
+{$ELSE}
+  AUDIO_FILENAME = 'test.wav';
+{$ENDIF}
 
 type
   TAudioRecPlayForm = class(TForm)
@@ -50,7 +65,6 @@ uses
   IOUtils;
 
 {$R *.fmx}
-{$R *.LgXhdpiPh.fmx ANDROID}
 
 { GetAudioFileName resolves the audio file path for either platform. }
 
@@ -62,7 +76,7 @@ begin
   {$IFDEF IOS}
     Result := TPath.GetHomePath + '/Documents/' + AFileName;
   {$ELSE}
-    Result := AFileName;
+    Result := TPath.Combine(TPath.GetTempPath, AFileName);
   {$ENDIF}
 {$ENDIF}
 end;

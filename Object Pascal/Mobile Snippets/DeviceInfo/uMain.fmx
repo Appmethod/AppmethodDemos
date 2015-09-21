@@ -22,9 +22,10 @@ object DeviceInfoForm: TDeviceInfoForm
     DefaultItemStyles.GroupHeaderStyle = ''
     DefaultItemStyles.GroupFooterStyle = ''
     GroupingKind = Grouped
+    Viewport.Width = 384.000000000000000000
+    Viewport.Height = 175.000000000000000000
     object lbOSName: TListBoxItem
-      Height = 44.000000000000000000
-      Size.Width = 344.000000000000000000
+      Size.Width = 384.000000000000000000
       Size.Height = 44.000000000000000000
       Size.PlatformDefault = False
       StyleLookup = 'listboxitemnodetail'
@@ -32,9 +33,8 @@ object DeviceInfoForm: TDeviceInfoForm
       Text = 'OS Name:'
     end
     object lbDeviceType: TListBoxItem
-      Height = 44.000000000000000000
       Position.Y = 44.000000000000000000
-      Size.Width = 344.000000000000000000
+      Size.Width = 384.000000000000000000
       Size.Height = 44.000000000000000000
       Size.PlatformDefault = False
       StyleLookup = 'listboxitemnodetail'
@@ -42,9 +42,8 @@ object DeviceInfoForm: TDeviceInfoForm
       Text = 'Device Type:'
     end
     object lbOSVersion: TListBoxItem
-      Height = 44.000000000000000000
       Position.Y = 88.000000000000000000
-      Size.Width = 344.000000000000000000
+      Size.Width = 384.000000000000000000
       Size.Height = 44.000000000000000000
       Size.PlatformDefault = False
       StyleLookup = 'listboxitemnodetail'

@@ -22,9 +22,10 @@ object CustomPickerForm: TCustomPickerForm
     DefaultItemStyles.GroupHeaderStyle = ''
     DefaultItemStyles.GroupFooterStyle = ''
     GroupingKind = Grouped
+    Viewport.Width = 384.000000000000000000
+    Viewport.Height = 93.000000000000000000
     object ListBoxItem5: TListBoxItem
-      Height = 44.000000000000000000
-      Size.Width = 344.000000000000000000
+      Size.Width = 384.000000000000000000
       Size.Height = 44.000000000000000000
       Size.PlatformDefault = False
       StyleLookup = 'listboxitemnodetail'
@@ -35,7 +36,7 @@ object CustomPickerForm: TCustomPickerForm
         Anchors = []
         DisableFocusEffect = False
         Margins.Right = 5.000000000000000000
-        Position.X = 186.000000000000000000
+        Position.X = 226.000000000000000000
         Position.Y = 6.000000000000000000
         Size.Width = 153.000000000000000000
         Size.Height = 32.000000000000000000
@@ -43,7 +44,6 @@ object CustomPickerForm: TCustomPickerForm
         TabOrder = 0
         OnChange = ComboBox1Change
         object ListBoxItem1: TListBoxItem
-          Height = 19.000000000000000000
           Size.Width = 19.000000000000000000
           Size.Height = 19.000000000000000000
           Size.PlatformDefault = False
@@ -51,7 +51,6 @@ object CustomPickerForm: TCustomPickerForm
           Text = 'Item One'
         end
         object ListBoxItem2: TListBoxItem
-          Height = 19.000000000000000000
           Size.Width = 19.000000000000000000
           Size.Height = 19.000000000000000000
           Size.PlatformDefault = False
@@ -59,7 +58,6 @@ object CustomPickerForm: TCustomPickerForm
           Text = 'Item Two'
         end
         object ListBoxItem3: TListBoxItem
-          Height = 19.000000000000000000
           Size.Width = 19.000000000000000000
           Size.Height = 19.000000000000000000
           Size.PlatformDefault = False
@@ -67,7 +65,6 @@ object CustomPickerForm: TCustomPickerForm
           Text = 'Item Three'
         end
         object ListBoxItem4: TListBoxItem
-          Height = 19.000000000000000000
           Size.Width = 19.000000000000000000
           Size.Height = 19.000000000000000000
           Size.PlatformDefault = False
@@ -77,9 +74,8 @@ object CustomPickerForm: TCustomPickerForm
       end
     end
     object ListBoxItem6: TListBoxItem
-      Height = 44.000000000000000000
       Position.Y = 44.000000000000000000
-      Size.Width = 344.000000000000000000
+      Size.Width = 384.000000000000000000
       Size.Height = 44.000000000000000000
       Size.PlatformDefault = False
       StyleLookup = 'listboxitemnodetail'

@@ -1,5 +1,14 @@
 //---------------------------------------------------------------------------
 
+// This software is Copyright (c) 2015 Embarcadero Technologies, Inc.
+// You may only use this software if you are an authorized licensee
+// of an Embarcadero developer tools product.
+// This software is considered a Redistributable as defined under
+// the software license agreement that comes with the Embarcadero Products
+// and is subject to that software license agreement.
+
+//---------------------------------------------------------------------------
+
 #ifndef uMainH
 #define uMainH
 //---------------------------------------------------------------------------
@@ -13,6 +22,7 @@
 #include <FMX.Types.hpp>
 #include <System.Actions.hpp>
 #include <FMX.MobilePreview.hpp>
+#include <FMX.Controls.Presentation.hpp>
 //---------------------------------------------------------------------------
 class TAudioRecPlayForm : public TForm
 {
@@ -39,7 +49,7 @@ __published:	// IDE-managed Components
 	void __fastcall actStopRecordingExecute(TObject *Sender);
 private:	// User declarations
 	TAudioCaptureDevice *FMicrophone;
-	const String AUDIO_FILENAME = "test.caf";
+	const String AUDIO_FILENAME;
 	bool __fastcall HasMicrophone();
 	bool __fastcall IsMicrophoneRecording();
 public:		// User declarations

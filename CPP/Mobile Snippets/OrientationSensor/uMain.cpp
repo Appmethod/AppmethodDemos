@@ -1,7 +1,6 @@
-
 //---------------------------------------------------------------------------
 
-// This software is Copyright (c) 2014 Embarcadero Technologies, Inc. 
+// This software is Copyright (c) 2015 Embarcadero Technologies, Inc.
 // You may only use this software if you are an authorized licensee
 // of an Embarcadero developer tools product.
 // This software is considered a Redistributable as defined under
@@ -9,7 +8,6 @@
 // and is subject to that software license agreement.
 
 //---------------------------------------------------------------------------
-// ---------------------------------------------------------------------------
 
 #include <fmx.h>
 #pragma hdrstop
@@ -72,11 +70,13 @@ void __fastcall TOrientationSensorForm::OrientationSensor1SensorChoosing(TObject
 	}
 	if ( Found < 0) {
 		Found = 0;
-		TiltButton->IsPressed = true;
-		HeadingButton->IsPressed = false;
-		ShowMessage("Compass not available");
+		if (TiltButton->IsPressed)
+		  ShowMessage("Inclinometer not available");
+		if (HeadingButton->IsPressed)
+		  ShowMessage("Compass not available");
 	}
-	ChoseSensorIndex = Found;
+	else
+	  ChoseSensorIndex = Found;
 }
 
 //---------------------------------------------------------------------------

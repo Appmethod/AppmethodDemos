@@ -1,20 +1,25 @@
 inherited CustomPickerForm_LgXhdpiPh: TCustomPickerForm_LgXhdpiPh
-  ClientHeight = 829
-  ClientWidth = 480
+  ClientHeight = 695
+  ClientWidth = 450
   DesignerMasterStyle = 3
   inherited ListBox1: TListBox
-    Size.Width = 480.000000000000000000
+    Size.Width = 450.000000000000000000
+    Viewport.Width = 450.000000000000000000
+    Viewport.Height = 93.000000000000000000
     inherited ListBoxItem5: TListBoxItem
-      Size.Width = 440.000000000000000000
+      Size.Width = 450.000000000000000000
+      inherited ComboBox1: TComboBox
+        Position.X = 292.000000000000000000
+      end
     end
     inherited ListBoxItem6: TListBoxItem
-      Size.Width = 440.000000000000000000
+      Size.Width = 450.000000000000000000
     end
   end
   inherited ToolBar1: TToolBar
-    Size.Width = 480.000000000000000000
+    Size.Width = 450.000000000000000000
     inherited Label1: TLabel
-      Size.Width = 480.000000000000000000
+      Size.Width = 450.000000000000000000
     end
   end
 end

@@ -1,7 +1,6 @@
-
 //---------------------------------------------------------------------------
 
-// This software is Copyright (c) 2014 Embarcadero Technologies, Inc. 
+// This software is Copyright (c) 2015 Embarcadero Technologies, Inc.
 // You may only use this software if you are an authorized licensee
 // of an Embarcadero developer tools product.
 // This software is considered a Redistributable as defined under
@@ -9,10 +8,10 @@
 // and is subject to that software license agreement.
 
 //---------------------------------------------------------------------------
-//---------------------------------------------------------------------------
 
 #include <fmx.h>
 #include <System.IOUtils.hpp>
+#include <FMX.ListView.Appearances.hpp>
 #pragma hdrstop
 
 #include "UMain.h"
@@ -51,21 +50,31 @@ __fastcall TTIBLiteForm::TTIBLiteForm(TComponent* Owner)
 //---------------------------------------------------------------------------
 void __fastcall TTIBLiteForm::FireTaskListBeforeConnect(TObject *Sender)
 {
-#if defined(TARGET_OS_IPHONE) || defined(__ANDROID__)
 	try {
+#if defined(TARGET_OS_IPHONE) || defined(__ANDROID__)
 	FireTaskList->Params->Values["Database"] =
 	  System::Ioutils::TPath::GetDocumentsPath() +
-	  	PathDelim + "TASKS.GDB";
+		PathDelim + "TASKS.GDB";
+#elif defined(_PLAT_MACOS)
+	FireTaskList->Params->Values["Database"] =
+	System::Ioutils::TPath::GetHomePath() +
+		PathDelim + "TASKS.GDB";
+#elif defined(_Windows)
+	FireTaskList->Params->Values["Database"] =
+	  System::Sysutils::GetCurrentDir() +
+		PathDelim + "TASKS.GDB";
+#endif
 	}
 	catch (Exception& E) {
 		ShowMessage(E.ClassName() + ": " + E.Message);
 	}
-#endif
+
+
 }
 //---------------------------------------------------------------------------
 void __fastcall TTIBLiteForm::DeleteButtonClick(TObject *Sender)
 {
- String TaskName = ListViewTASKNAME->Selected->Text;
+ String TaskName = dynamic_cast<TAppearanceListViewItem*>(ListViewTASKNAME->Selected)->Text;
 	try {
 		FDTableTask->Active = false;
 		FDQueryDelete->ParamByName("TASKNAME")->AsString = TaskName;

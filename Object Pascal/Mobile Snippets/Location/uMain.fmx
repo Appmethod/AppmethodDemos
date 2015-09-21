@@ -23,8 +23,10 @@ object LocationForm: TLocationForm
     DefaultItemStyles.GroupHeaderStyle = ''
     DefaultItemStyles.GroupFooterStyle = ''
     GroupingKind = Grouped
+    Viewport.Width = 384.000000000000000000
+    Viewport.Height = 227.000000000000000000
     object lbLocationSensor: TListBoxItem
-      Size.Width = 344.000000000000000000
+      Size.Width = 384.000000000000000000
       Size.Height = 44.000000000000000000
       Size.PlatformDefault = False
       TabOrder = 0
@@ -34,9 +36,9 @@ object LocationForm: TLocationForm
         Anchors = []
         IsChecked = False
         Margins.Right = 5.000000000000000000
-        Position.X = 263.000000000000000000
+        Position.X = 335.000000000000000000
         Position.Y = 9.000000000000000000
-        Size.Width = 76.000000000000000000
+        Size.Width = 44.000000000000000000
         Size.Height = 26.000000000000000000
         Size.PlatformDefault = False
         TabOrder = 0
@@ -49,7 +51,7 @@ object LocationForm: TLocationForm
     end
     object lbTriggerDistance: TListBoxItem
       Position.Y = 44.000000000000000000
-      Size.Width = 344.000000000000000000
+      Size.Width = 384.000000000000000000
       Size.Height = 44.000000000000000000
       Size.PlatformDefault = False
       TabOrder = 1
@@ -61,17 +63,18 @@ object LocationForm: TLocationForm
         Cursor = crIBeam
         KeyboardType = Default
         TextSettings.HorzAlign = Center
-        Position.X = 199.000000000000000000
+        Position.X = 239.000000000000000000
         Position.Y = 6.000000000000000000
         Margins.Right = 5.000000000000000000
         Size.Width = 41.000000000000000000
         Size.Height = 32.000000000000000000
         Size.PlatformDefault = False
+        OnChange = nbTriggerDistanceChange
       end
       object Button1: TButton
         Align = Right
         Anchors = []
-        Position.X = 245.000000000000000000
+        Position.X = 285.000000000000000000
         Position.Y = 5.000000000000000000
         Size.Width = 47.000000000000000000
         Size.Height = 34.000000000000000000
@@ -85,7 +88,7 @@ object LocationForm: TLocationForm
         Align = Right
         Anchors = []
         Margins.Right = 5.000000000000000000
-        Position.X = 292.000000000000000000
+        Position.X = 332.000000000000000000
         Position.Y = 5.000000000000000000
         Size.Width = 47.000000000000000000
         Size.Height = 34.000000000000000000
@@ -98,7 +101,7 @@ object LocationForm: TLocationForm
     end
     object lbAccuracy: TListBoxItem
       Position.Y = 88.000000000000000000
-      Size.Width = 344.000000000000000000
+      Size.Width = 384.000000000000000000
       Size.Height = 44.000000000000000000
       Size.PlatformDefault = False
       TabOrder = 2
@@ -106,7 +109,7 @@ object LocationForm: TLocationForm
       object Button3: TButton
         Align = Right
         Anchors = []
-        Position.X = 245.000000000000000000
+        Position.X = 285.000000000000000000
         Position.Y = 5.000000000000000000
         Size.Width = 47.000000000000000000
         Size.Height = 34.000000000000000000
@@ -120,7 +123,7 @@ object LocationForm: TLocationForm
         Align = Right
         Anchors = []
         Margins.Right = 5.000000000000000000
-        Position.X = 292.000000000000000000
+        Position.X = 332.000000000000000000
         Position.Y = 5.000000000000000000
         Size.Width = 47.000000000000000000
         Size.Height = 34.000000000000000000
@@ -137,17 +140,18 @@ object LocationForm: TLocationForm
         Cursor = crIBeam
         KeyboardType = Default
         TextSettings.HorzAlign = Center
-        Position.X = 199.000000000000000000
+        Position.X = 239.000000000000000000
         Position.Y = 6.000000000000000000
         Margins.Right = 5.000000000000000000
         Size.Width = 41.000000000000000000
         Size.Height = 32.000000000000000000
         Size.PlatformDefault = False
+        OnChange = nbAccuracyChange
       end
     end
     object lbLatitude: TListBoxItem
       Position.Y = 132.000000000000000000
-      Size.Width = 344.000000000000000000
+      Size.Width = 384.000000000000000000
       Size.Height = 44.000000000000000000
       Size.PlatformDefault = False
       TabOrder = 3
@@ -155,7 +159,7 @@ object LocationForm: TLocationForm
     end
     object lbLongitude: TListBoxItem
       Position.Y = 176.000000000000000000
-      Size.Width = 344.000000000000000000
+      Size.Width = 384.000000000000000000
       Size.Height = 44.000000000000000000
       Size.PlatformDefault = False
       TabOrder = 4

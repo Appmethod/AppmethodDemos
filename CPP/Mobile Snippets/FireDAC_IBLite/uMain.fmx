@@ -38,7 +38,7 @@ object TIBLiteForm: TTIBLiteForm
         Align = Left
         Margins.Left = 5.000000000000000000
         Position.X = 5.000000000000000000
-        Size.Width = 73.000000000000000000
+        Size.Width = 48.000000000000000000
         Size.Height = 48.000000000000000000
         Size.PlatformDefault = False
         StyleLookup = 'deletetoolbutton'
@@ -69,13 +69,9 @@ object TIBLiteForm: TTIBLiteForm
   end
   object FireTaskList: TFDConnection
     Params.Strings = (
-      
-        'Database=C:\Users\Public\Documents\Embarcadero\Studio\15.0\Sampl' +
-        'es\CPP\Mobile Snippets\FireDAC_IBLite\TASKS.GDB'
-      'User_Name=SYSDBA'
+      'User_Name=sysdba'
       'Password=masterkey'
-      'CharacterSet=UTF8'
-      'DriverID=IB')
+      'DriverID=IBLite')
     LoginPrompt = False
     BeforeConnect = FireTaskListBeforeConnect
     Left = 32

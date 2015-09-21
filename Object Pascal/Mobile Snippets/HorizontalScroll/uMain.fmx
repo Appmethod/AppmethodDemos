@@ -13,6 +13,8 @@ object HorizontalScrollForm: THorizontalScrollForm
     Size.Height = 519.000000000000000000
     Size.PlatformDefault = False
     TabOrder = 0
+    Viewport.Width = 384.000000000000000000
+    Viewport.Height = 514.000000000000000000
     object Image2: TImage
       MultiResBitmap = <
         item

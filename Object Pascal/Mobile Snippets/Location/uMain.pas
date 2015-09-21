@@ -1,3 +1,14 @@
+//---------------------------------------------------------------------------
+
+// This software is Copyright (c) 2015 Embarcadero Technologies, Inc.
+// You may only use this software if you are an authorized licensee
+// of an Embarcadero developer tools product.
+// This software is considered a Redistributable as defined under
+// the software license agreement that comes with the Embarcadero Products
+// and is subject to that software license agreement.
+
+//---------------------------------------------------------------------------
+
 unit uMain;
 
 interface
@@ -29,13 +40,13 @@ type
     Label1: TLabel;
     procedure LocationSensor1LocationChanged(Sender: TObject; const OldLocation,
       NewLocation: TLocationCoord2D);
-    procedure sbAccuracyChange(Sender: TObject);
-    procedure sbTriggerDistanceChange(Sender: TObject);
     procedure Button1Click(Sender: TObject);
     procedure Button2Click(Sender: TObject);
     procedure Button3Click(Sender: TObject);
     procedure Button4Click(Sender: TObject);
     procedure swLocationSensorActiveSwitch(Sender: TObject);
+    procedure nbTriggerDistanceChange(Sender: TObject);
+    procedure nbAccuracyChange(Sender: TObject);
   private
     { Private declarations }
   public
@@ -48,7 +59,6 @@ var
 implementation
 
 {$R *.fmx}
-{$R *.LgXhdpiPh.fmx ANDROID}
 
 procedure TLocationForm.Button1Click(Sender: TObject);
 begin
@@ -87,13 +97,13 @@ begin
   WebBrowser1.Navigate(Format(LGoogleMapsURL, [ENUSLat, ENUSLong]));
 end;
 
-procedure TLocationForm.sbAccuracyChange(Sender: TObject);
+procedure TLocationForm.nbAccuracyChange(Sender: TObject);
 begin
   { set the precision }
   LocationSensor1.Accuracy := nbAccuracy.Value;
 end;
 
-procedure TLocationForm.sbTriggerDistanceChange(Sender: TObject);
+procedure TLocationForm.nbTriggerDistanceChange(Sender: TObject);
 begin
   { set the triggering distance }
   LocationSensor1.Distance := nbTriggerDistance.Value;

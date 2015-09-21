@@ -1,18 +1,24 @@
 inherited CameraRollForm_LgXhdpiPh: TCameraRollForm_LgXhdpiPh
-  ClientHeight = 829
-  ClientWidth = 480
+  ClientHeight = 695
+  ClientWidth = 450
   DesignerMasterStyle = 3
   inherited imgPhotoLibraryImage: TImage
-    Size.Width = 480.000000000000000000
-    Size.Height = 781.000000000000000000
+    MultiResBitmap = <
+      item
+        Scale = 2.000000000000000000
+      end
+      item
+      end>
+    Size.Width = 450.000000000000000000
+    Size.Height = 647.000000000000000000
   end
   inherited ToolBar1: TToolBar
-    Size.Width = 480.000000000000000000
+    Size.Width = 450.000000000000000000
     inherited Label1: TLabel
-      Size.Width = 480.000000000000000000
+      Size.Width = 450.000000000000000000
     end
     inherited btnPhotoLibrary: TButton
-      Position.X = 427.000000000000000000
+      Position.X = 397.000000000000000000
     end
   end
 end
